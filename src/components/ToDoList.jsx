@@ -20,7 +20,7 @@ function ToDoList() {
     const completedTodo = id =>{
         let upDatedToDo = toDoItem.map((toDo)=>{
             if(toDo.id === id){
-                toDo.isDone=true;
+                toDo.isDone=!toDo.isDone;
             }
             return toDo;
         })
@@ -29,10 +29,10 @@ function ToDoList() {
     }
 
   return (
-    <>
+    <div>
     <ToDoForm addToDo={addToDo} />
     <ToDoItems toDoItem={toDoItem} completedTodo={completedTodo} removeToDo={removeToDo} />
-    </>
+    </div>
   )
 }
 

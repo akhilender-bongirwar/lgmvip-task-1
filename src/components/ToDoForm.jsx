@@ -17,7 +17,7 @@ function ToDoForm(props) {
   }
 
   return (
-    <form className='form'>
+    <form className='form-container'>
         <input className='to-do-input' type='text' placeholder='Enter a to-do-item....' onChange={handleChange} value={input} />
         <button type='submit' className='submit-btn' onClick={handleClick} >Submit</button>
     </form>
