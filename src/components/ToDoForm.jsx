@@ -7,8 +7,9 @@ function ToDoForm(props) {
   }
   const handleClick = (e)=>{
     e.preventDefault();
-    props.addTodo({
-        id:Math.floor(Math.random*1000000),
+    console.log(props);
+    props.addToDo({
+        id:Math.floor(Math.random()*100000),
         value:input,
         isDone:false,
     })
@@ -16,9 +17,9 @@ function ToDoForm(props) {
   }
 
   return (
-    <form>
+    <form className='form'>
         <input className='to-do-input' type='text' placeholder='Enter a to-do-item....' onChange={handleChange} value={input} />
-        <button type='submit' className='submit-btn' onClick={handleClick} />
+        <button type='submit' className='submit-btn' onClick={handleClick} >Submit</button>
     </form>
   )
 }

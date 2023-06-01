@@ -5,9 +5,9 @@ import ToDoList from './components/ToDoList'
 function App() {
 
   return (
-    <>
+    <div className='to-do-list-container'>
       <ToDoList />
-    </>
+    </div>
   )
 }
 
